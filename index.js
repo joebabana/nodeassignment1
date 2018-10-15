@@ -86,13 +86,13 @@ handlers.notfound = function(data, callback) {
  callback(404);
 };
 
-handlers.myown = function (data, callback) {
-	callback('202g', {'name':'my own handlers', 'purpose':'testing', 'version':1.20});
+handlers.forHelloReq = function (data, callback) {
+	callback(202, {'message':'Greetings, welcome to Master Class Node Assignment1', 'purpose':'Complete Assignment1', 'version':1.21});
 };
 
 // Define a router
 var router = {
 'sample': handlers.sample,
-'deng' : handlers.myown,
+'hello' : handlers.forHelloReq,
 'ping' : handlers.ping
 };
